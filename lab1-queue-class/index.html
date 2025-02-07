@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classe - Lab 01</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+
+  <body class="bg-zinc-400">
+    <div id="main" class="min-h-screen flex items-center justify-center px-4">
+      <div
+        class="bg-zinc-300 shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4 w-full max-w-4xl"
+      >
+        <h1
+          class="text-xl sm:text-3xl font-extrabold leading-normal my-8 text-center text-gray-900"
+        >
+          Lab 01 - Mostrando um array e alterando os seus elementos (push, pop,
+          unshift, shift)
+        </h1>
+
+        <div class="mb-6">
+          <div class="flex items-center justify-center">
+            <datalist id="numeros">
+              <option value="1"></option>
+              <option value="2"></option>
+              <option value="3"></option>
+              <option value="5"></option>
+            </datalist>
+          </div>
+        </div>
+
+        <p class="text-lg text-gray-700">Veja os dados do seu array</p>
+
+        <div
+          id="meuArray"
+          class="bg-sky-700 shadow-md rounded p-4 m-4 h-30 mx-2 flex justify-start flex-wrap overflow-auto text-white"
+        ></div>
+
+        <div class="mt-6" id="resultado">
+
+        </div>
+        <div>
+          <input
+            class="mt-4 w-full py-3 px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg"
+            type="number"
+            name="elemento"
+            id="addValor"
+            placeholder="Adicioner um valor"
+            list="numeros"
+          />
+          <p class="text-lg mt-6 text-gray-700">
+            Selecione uma operação para transformar o array
+          </p>
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6"
+          >
+            <input
+              type="button"
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              value="enqueue"
+              id="enqueue"
+            />
+            <input
+              type="button"
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              value="front"
+              id="front"
+            />
+            <input
+              type="button"
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              value="rear"
+              id="rear"
+            />
+            <input
+              type="button"
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              value="dequeue"
+              id="dequeue"
+            />
+
+            <input
+            type="button"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            value="size"
+            id="size"
+          />
+
+          <input
+            type="button"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            value="empty"
+            id="empty"
+          />
+          </div>
+        </div>
+
+        <!-- <div class="mt-6">
+          <p class="text-lg text-gray-700">Resultado</p>
+          <div
+            id="resultado"
+            class="bg-sky-700 shadow-md rounded p-4 m-4 h-30 mx-2 flex justify-start flex-wrap overflow-auto text-white"
+          ></div>
+        </div> -->
+      </div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
